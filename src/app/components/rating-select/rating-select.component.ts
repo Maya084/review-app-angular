@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-rating-select',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RatingSelectComponent implements OnInit {
 
   radioButtonValues: any[] = [];
-  selected = 10;
+  @Output() selected = new EventEmitter();
 
   constructor() { }
 
@@ -25,7 +26,7 @@ export class RatingSelectComponent implements OnInit {
   }
 
   onChange(event: any) {
-    // dispatch("rating-select", e.currentTarget.value);
+    this.selected.emit(+event.target.value);
   };
 
 }

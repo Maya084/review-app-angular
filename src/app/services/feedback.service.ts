@@ -5,9 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class FeedbackService {
-  delete(itemId: number) {
-      this.feedbackSubc.next(this.feedbackSubc.value.filter((item) => item.id != itemId));
-  }
 
   feedbackSubc = new BehaviorSubject<any[]>([
     {
@@ -32,4 +29,11 @@ export class FeedbackService {
 
   constructor() { }
 
+  add(arg0: { id: any; comment: string; rating: number; }) {
+    throw new Error('Method not implemented.');
+  }
+
+  delete(itemId: number) {
+      this.feedbackSubc.next(this.feedbackSubc.value.filter((item) => item.id != itemId));
+  }
 }
