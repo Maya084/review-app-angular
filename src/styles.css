@@ -1,67 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	background-color: #202142;
-	line-height: 1.6;
-	color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background-color: #202142;
+  line-height: 1.6;
+  color: #fff;
+  padding: 20px
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 .container {
-	max-width: 768px;
-	margin: 100px auto;
-	padding: 0 20px;
+  max-width: 768px;
+  margin: 100px auto;
+  padding: 0 20px;
 }
 
-.card{
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 40px 50px;
-    margin: 20px 0;
-    position: relative;
-    color: #333;
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+  color: #333;
 }
 
 button.custom-btn {
-    color: #fff;
-    border: 0;
-    border-radius: 8px;
-    color: #fff;
-    width: 100px;
-    height: 40px;
-    cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .custom-btn.primary {
-    background-color: #202142;
+  background-color: #202142;
 }
 
 .custom-btn.secondary {
-    background: #ff6a95;
+  background: #ff6a95;
 }
 
 button.custom-btn:hover {
-    transform: scale(0.98);
-    opacity: 0.9;
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 button.custom-btn:disabled {
-    background-color: #cccccc;
-    color: #333;
-    cursor: auto;
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
 }
 
 button.custom-btn:disabled:hover {
-    transform: scale(1);
-    opacity: 1;
+  transform: scale(1);
+  opacity: 1;
 }

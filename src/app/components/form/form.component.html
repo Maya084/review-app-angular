@@ -1,2 +1,18 @@
-<app-rating-select></app-rating-select>
+<div class="card">
 
+  <app-rating-select></app-rating-select>
+
+  <header>
+    <h2>How would you rate your service with us?</h2>
+  </header>
+  <form (submit)="handleSubmit()">
+    <div class="input-group">
+      <input type="text" placeholder="Tell us something that keeps you coming back" />
+      <button class="custom-btn" type="submit" [disabled]="btnDisabled">Send</button>
+    </div>
+    <p class="message" *ngIf="btnDisabled">
+      The review must be at least 10 characters long.
+    </p>
+</form>
+
+</div>
