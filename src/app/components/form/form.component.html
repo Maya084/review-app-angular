@@ -7,8 +7,9 @@
   </header>
   <form (submit)="handleSubmit()">
     <div class="input-group">
-      <input type="text" placeholder="Tell us something that keeps you coming back" />
-      <button class="custom-btn" type="submit" [disabled]="btnDisabled">Send</button>
+      <input #input type="text" placeholder="Tell us something that keeps you coming back" 
+      (input)="onChangeInput(input.value)"/>
+      <button class="custom-btn primary" type="submit" [disabled]="btnDisabled" [class.disabled]>Send</button>
     </div>
     <p class="message" *ngIf="btnDisabled">
       The review must be at least 10 characters long.

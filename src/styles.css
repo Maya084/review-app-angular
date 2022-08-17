@@ -43,11 +43,11 @@ button.custom-btn {
   cursor: pointer;
 }
 
-.custom-btn.primary {
+button.custom-btn.primary {
   background-color: #202142;
 }
 
-.custom-btn.secondary {
+button.custom-btn.secondary {
   background: #ff6a95;
 }
 

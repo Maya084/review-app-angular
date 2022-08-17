@@ -1,9 +1,9 @@
 <div class="list-reviews" *ngFor="let item of (listItems | async)">
-  <div class="feedback-item card" [@simpleFadeAnimation]="item">
+  <div class="feedback-item card">
     <div class="num-display">
       {{item.rating}}
     </div>
-    <button class="close custom-btn" (click)="handleDelete(item.id)">x</button>
+    <button class="close" (click)="handleDelete(item.id)">x</button>
     <p class="text-display">
       {{item.comment}}
     </p>
