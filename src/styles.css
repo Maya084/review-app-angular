@@ -22,3 +22,46 @@ ul {
 	margin: 100px auto;
 	padding: 0 20px;
 }
+
+.card{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 50px;
+    margin: 20px 0;
+    position: relative;
+    color: #333;
+}
+
+button.custom-btn {
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.custom-btn.primary {
+    background-color: #202142;
+}
+
+.custom-btn.secondary {
+    background: #ff6a95;
+}
+
+button.custom-btn:hover {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+button.custom-btn:disabled {
+    background-color: #cccccc;
+    color: #333;
+    cursor: auto;
+}
+
+button.custom-btn:disabled:hover {
+    transform: scale(1);
+    opacity: 1;
+}

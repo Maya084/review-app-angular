@@ -1,0 +1,12 @@
+<ul class="rating" >
+  <li *ngFor="let rating of radioButtonValues">
+    <input 
+      type="radio" 
+      name="rating" 
+      [id]="rating.id" 
+      [value]="rating.value" 
+      (change)="onChange($event)"
+      [checked]="selected===rating.value" />
+    <label [for]="rating.id">{{rating.value}}</label>
+  </li>
+</ul>
