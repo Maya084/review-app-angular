@@ -29,11 +29,12 @@ export class FeedbackService {
 
   constructor() { }
 
-  add(arg0: { id: any; comment: string; rating: number; }) {
-    throw new Error('Method not implemented.');
+  add(newFeedback: { id: any; comment: string; rating: number; }) {
+    const list = this.feedbackSubc.value;
+    this.feedbackSubc.next([...list, newFeedback]);
   }
 
   delete(itemId: number) {
-      this.feedbackSubc.next(this.feedbackSubc.value.filter((item) => item.id != itemId));
+    this.feedbackSubc.next(this.feedbackSubc.value.filter((item) => item.id != itemId));
   }
 }

@@ -38,8 +38,7 @@ export class FormComponent implements OnInit {
     this.btnDisabled = this.commentValue.trim().length < this.minLength;
   }
 
-  getRating(a: any): void {
-    console.log(a);
-
+  getRating(ratingValue: any): void {
+    this.rating = ratingValue;
   }
 }
