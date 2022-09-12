@@ -10,7 +10,7 @@ export class RatingSelectComponent implements OnInit {
 
   radioButtonValues: any[] = [];
   @Output() selected = new EventEmitter();
-
+  selectedValue = 10;
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +26,7 @@ export class RatingSelectComponent implements OnInit {
   }
 
   onChange(event: any) {
+    this.selectedValue = +event.target.value;
     this.selected.emit(+event.target.value);
   };
 

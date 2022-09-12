@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './components/form/form.component';
 import { ListComponent } from './components/list/list.component';
 import { RatingSelectComponent } from './components/rating-select/rating-select.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +15,7 @@ import { RatingSelectComponent } from './components/rating-select/rating-select.
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

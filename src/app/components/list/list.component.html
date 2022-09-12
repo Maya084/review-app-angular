@@ -1,5 +1,4 @@
-<div class="list-reviews" *ngFor="let item of (listItems | async)">
-  <div class="feedback-item card">
+  <div [@simpleFadeAnimation]="'in'" *ngFor="let item of (listItems | async)" class="feedback-item card">
     <div class="num-display">
       {{item.rating}}
     </div>
@@ -8,4 +7,3 @@
       {{item.comment}}
     </p>
   </div>
-</div>

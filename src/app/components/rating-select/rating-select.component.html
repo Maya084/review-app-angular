@@ -6,7 +6,7 @@
       [id]="rating.id" 
       [value]="rating.value" 
       (change)="onChange($event)"
-      [checked]="selected===rating.value" />
+      [checked]="selectedValue===rating.value" />
     <label [for]="rating.id">{{rating.value}}</label>
   </li>
 </ul>

@@ -5,15 +5,19 @@
   <header>
     <h2>How would you rate your service with us?</h2>
   </header>
-  <form (submit)="handleSubmit()">
+
+  <form>
     <div class="input-group">
-      <input #input type="text" placeholder="Tell us something that keeps you coming back" 
-      (input)="onChangeInput(input.value)"/>
-      <button class="custom-btn primary" type="submit" [disabled]="btnDisabled" [class.disabled]>Send</button>
+      <input #input type="text" placeholder="Tell us something that keeps you coming back"
+        (input)="onChangeInput(input.value)" />
+      <button [@enableDisable] (click)="handleSubmit()" class="custom-btn primary" type="button" [disabled]="btnDisabled">Send</button>
     </div>
     <p class="message" *ngIf="btnDisabled">
       The review must be at least 10 characters long.
     </p>
-</form>
+  </form>
+
+
+
 
 </div>

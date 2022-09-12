@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FeedbackService {
 
-  feedbackSubc = new BehaviorSubject<any[]>([
+  feedbacksSubc = new BehaviorSubject([
     {
       id: 1,
       rating: 10,
@@ -25,16 +25,23 @@ export class FeedbackService {
         "Illum a nobis harum ullam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     },
   ]);
-  feedback$ = this.feedbackSubc.asObservable();
 
-  constructor() { }
-
-  add(newFeedback: { id: any; comment: string; rating: number; }) {
-    const list = this.feedbackSubc.value;
-    this.feedbackSubc.next([...list, newFeedback]);
+  constructor() {
   }
 
-  delete(itemId: number) {
-    this.feedbackSubc.next(this.feedbackSubc.value.filter((item) => item.id != itemId));
+  add(newFeedback: any): void {
+    const helper = this.feedbacksSubc.value;
+    helper.push(newFeedback);
+    console.log(helper);
+    
+    
+    this.feedbacksSubc.next(helper);
+  }
+
+  delete(itemId: number): void {
+    const helper = this.feedbacksSubc.value;
+    this.feedbacksSubc.next(helper.filter(
+      (item) => item.id != itemId
+    ));
   }
 }
