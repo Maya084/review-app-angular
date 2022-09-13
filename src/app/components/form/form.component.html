@@ -8,16 +8,13 @@
 
   <form>
     <div class="input-group">
-      <input #input type="text" placeholder="Tell us something that keeps you coming back"
-        (input)="onChangeInput(input.value)" />
-      <button [@enableDisable] (click)="handleSubmit()" class="custom-btn primary" type="button" [disabled]="btnDisabled">Send</button>
+      <input type="text" [formControl]="formFeedback" placeholder="Tell us something that keeps you coming back" />
+      <button (click)="handleSubmit()" class="custom-btn primary" type="button"
+        [disabled]="formFeedback.invalid">Send</button>
     </div>
-    <p class="message" *ngIf="btnDisabled">
+    <p class="message" *ngIf="formFeedback.invalid">
       The review must be at least 10 characters long.
     </p>
   </form>
-
-
-
 
 </div>
