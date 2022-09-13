@@ -6,12 +6,14 @@ import { ListComponent } from './components/list/list.component';
 import { RatingSelectComponent } from './components/rating-select/rating-select.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ReactiveFormsModule } from '@angular/forms';
+import { StatsComponent } from './components/stats/stats.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     FormComponent,
-    RatingSelectComponent
+    RatingSelectComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

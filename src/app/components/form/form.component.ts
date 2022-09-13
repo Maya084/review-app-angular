@@ -34,6 +34,7 @@ export class FormComponent implements OnInit {
     };
 
     this.service.add(newFeedback);
+    this.formFeedback.patchValue('');
   }
 
   getRating(ratingValue: any): void {

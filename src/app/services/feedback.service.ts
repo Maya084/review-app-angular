@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FeedbackService {
 
-  feedbacksSubc = new BehaviorSubject([
+  private feedbacksSubc = new BehaviorSubject([
     {
       id: 1,
       rating: 10,
@@ -25,15 +25,14 @@ export class FeedbackService {
         "Illum a nobis harum ullam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     },
   ]);
+  feedback$ = this.feedbacksSubc.asObservable();
 
   constructor() {
   }
 
   add(newFeedback: any): void {
     const helper = this.feedbacksSubc.value;
-    helper.push(newFeedback);
-    console.log(helper);
-    
+    helper.unshift(newFeedback);
     
     this.feedbacksSubc.next(helper);
   }
