@@ -20,7 +20,6 @@ import { FeedbackService } from '../../services/feedback.service';
 
       // fade out when destroyed. this could also be written as transition('void => *')
       transition(':leave',
-
         animate(500, style({ opacity: 0 })))
     ])
   ]

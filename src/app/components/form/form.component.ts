@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FeedbackService } from '../../services/feedback.service';
 import { v4 as uuidv4 } from 'uuid';
 import { FormControl, Validators } from '@angular/forms';
+import { minCharsValidator } from '../../util/validator';
 
 @Component({
   selector: 'app-form',
@@ -13,7 +14,7 @@ export class FormComponent implements OnInit {
   minLength = 10;
   rating = 10;
 
-  formFeedback = new FormControl('', [Validators.minLength(this.minLength)]);
+  formFeedback = new FormControl('', [Validators.required, minCharsValidator(this.minLength)]);
 
   constructor(
     private service: FeedbackService,
